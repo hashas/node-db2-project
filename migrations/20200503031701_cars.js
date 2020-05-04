@@ -1,4 +1,4 @@
-
+// use knex to specify db migration
 exports.up = async function(knex) {
 	await knex.schema.createTable("cars", (table) => {
 		// table.integer("id)".notNull().unique().primary()
@@ -15,8 +15,9 @@ exports.up = async function(knex) {
 	})
 };
 
-exports.down = function(knex) {
-  
+// down function must undo the above function
+exports.down = async function(knex) {
+  await knex.schema.dropTableIfExists("cars")
 };
 
 

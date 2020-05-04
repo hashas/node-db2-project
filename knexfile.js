@@ -6,6 +6,6 @@ module.exports = {
   connection: {
     filename: "./data/cars.db3" // location of database file
   },
-  useNullAsDefault: true
+  useNullAsDefault: true // a flag required for SQLite
 
 };
